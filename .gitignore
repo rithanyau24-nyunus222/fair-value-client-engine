@@ -1,14 +1,9 @@
-# Virtual Environment & Python cache
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .ipynb_checkpoints/
-
-# Raw large files (>10MB) for GitHub portability
 data/Online_Retail.csv
 data/*.zip
-
-# Local 1-click launcher & generated export
 run.bat
 export_powerbi.csv

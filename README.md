@@ -19,7 +19,7 @@ Retail CRM algorithms allocate high-touch outreach, dedicated client advisors, a
 
 ## 🏗️ Project Architecture & Deliverables
 
-The entire project is engineered to remain **strictly under 10 files** and **under 5 MB total git footprint** for immediate GitHub portability and instant Streamlit Cloud deployment:
+The entire project is engineered to remain **strictly under 10 files** and **under 5 MB total git footprint** for immediate GitHub portability and instant Vercel deployment:
 
 ```
 ├── .gitignore                               # Ignores raw 44MB CSV; keeps repo lightweight (<5MB)
@@ -27,7 +27,7 @@ The entire project is engineered to remain **strictly under 10 files** and **und
 ├── business_memo.md                         # Executive memo for CMO, CRM & Clienteling leadership
 ├── model_card.md                            # Formal compliance model card (Mitchell et al., 2019)
 ├── engine.py                                # Master end-to-end pipeline (Phases 1-9)
-├── app.py                                   # Interactive Streamlit Web App & Frontier Simulator
+├── index.html                               # High-Performance Interactive Web App (Vercel-native)
 ├── requirements.txt                         # 1-step dependency installation manifest
 └── data/
     ├── cleaned_online_retail.parquet        # Cleaned transactional records (392,692 rows)
@@ -54,23 +54,14 @@ The entire project is engineered to remain **strictly under 10 files** and **und
 
 ## 🚀 Quickstart & Reproduction
 
-### 1. Install Dependencies
+### 1. View Live Web Dashboard (Zero Installation Required)
+* **Live on Vercel:** Open the repository on [Vercel](https://vercel.com) to deploy instantly with zero configuration.
+* **Run Locally:** Double-click `index.html` (or run `start index.html` in terminal) to launch the interactive platform in any browser.
+
+### 2. Run the Python Pipeline (For Data Scientists)
 ```bash
 pip install -r requirements.txt
-```
-
-### 2. Launch the Interactive Web Application
-```bash
-streamlit run app.py
-```
-
-### 3. Run the CLI Pipeline (Optional)
-```bash
-# Run the complete end-to-end pipeline (Phases 1 through 9)
 python engine.py --all
-
-# Or run an individual phase (e.g., Phase 2 RFM Segmentation)
-python engine.py --phase 2
 ```
 
 ---
