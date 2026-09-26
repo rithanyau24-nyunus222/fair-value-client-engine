@@ -9,5 +9,6 @@ __pycache__/
 data/Online_Retail.csv
 data/*.zip
 
-# Local 1-click launcher
+# Local 1-click launcher & generated export
 run.bat
+export_powerbi.csv

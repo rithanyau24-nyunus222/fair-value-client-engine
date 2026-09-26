@@ -19,15 +19,16 @@ Retail CRM algorithms allocate high-touch outreach, dedicated client advisors, a
 
 ## 🏗️ Project Architecture & Deliverables
 
-The entire project is engineered to remain **strictly under 10 files** and **under 5 MB total git footprint** for immediate GitHub portability:
+The entire project is engineered to remain **strictly under 10 files** and **under 5 MB total git footprint** for immediate GitHub portability and instant Streamlit Cloud deployment:
 
 ```
-├── .gitignore                               # Ignores large raw CSVs; keeps repo lightweight (<5MB)
+├── .gitignore                               # Ignores raw 44MB CSV; keeps repo lightweight (<5MB)
 ├── README.md                                # Project overview, quickstart & portfolio documentation
 ├── business_memo.md                         # Executive memo for CMO, CRM & Clienteling leadership
 ├── model_card.md                            # Formal compliance model card (Mitchell et al., 2019)
-├── export_powerbi.csv                       # Clean summary dataset (4,338 customers) for Power BI
 ├── engine.py                                # Master end-to-end pipeline (Phases 1-9)
+├── app.py                                   # Interactive Streamlit Web App & Frontier Simulator
+├── requirements.txt                         # 1-step dependency installation manifest
 └── data/
     ├── cleaned_online_retail.parquet        # Cleaned transactional records (392,692 rows)
     └── recalibrated_clienteling_portfolio.parquet # Master customer analytics & fairness table
@@ -53,18 +54,23 @@ The entire project is engineered to remain **strictly under 10 files** and **und
 
 ## 🚀 Quickstart & Reproduction
 
-### Prerequisites
+### 1. Install Dependencies
 ```bash
-pip install pandas numpy scikit-learn lifetimes statsmodels joblib pyarrow
+pip install -r requirements.txt
 ```
 
-### Run the Master Pipeline
+### 2. Launch the Interactive Web Application
+```bash
+streamlit run app.py
+```
+
+### 3. Run the CLI Pipeline (Optional)
 ```bash
 # Run the complete end-to-end pipeline (Phases 1 through 9)
 python engine.py --all
 
-# Or run an individual phase (e.g., Phase 9 Power BI export)
-python engine.py --phase 9
+# Or run an individual phase (e.g., Phase 2 RFM Segmentation)
+python engine.py --phase 2
 ```
 
 ---

@@ -5,3 +5,4 @@ lifetimes>=0.11.3
 statsmodels>=0.14.0
 joblib>=1.2.0
 pyarrow>=12.0.0
+streamlit>=1.30.0
